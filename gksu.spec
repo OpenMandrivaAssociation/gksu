@@ -49,12 +49,13 @@ desktop-file-install --vendor="" \
 rm -fr %buildroot
 
 %post
-sh /usr/share/gksu/gksu-migrate-conf.sh
-
+if [ -e /etc/gksu.conf ]; then
+   sh /usr/share/gksu/gksu-migrate-conf.sh
+fi
 
 %files -f %name.lang
 %defattr (-,root,root)
-%doc ABOUT-NLS AUTHORS ChangeLog COPYING README
+%doc AUTHORS ChangeLog COPYING README
 %{_bindir}/*
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/*.png
