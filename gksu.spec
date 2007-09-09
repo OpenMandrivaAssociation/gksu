@@ -19,6 +19,7 @@ BuildRequires:	gtk-doc
 BuildRequires:  perl-XML-Parser
 BuildRequires:  gnome-keyring-devel
 BuildRequires:  nautilus-devel
+BuildRequires:  libgcrypt-devel
 BuildRequires:  desktop-file-utils
 
 %description
