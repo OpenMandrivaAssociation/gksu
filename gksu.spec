@@ -10,6 +10,7 @@ License: 	GPL
 Group: 	 	Graphical desktop/GNOME
 Url:		http://www.nongnu.org/gksu/
 Source:  	http://people.debian.org/~kov/gksu/gksu/%name-%version.tar.bz2
+BuildRoot: 	%{_tmppath}/%name-root
 BuildRequires: 	gettext pkgconfig libgtk+2.0-devel bison autoconf2.5
 #BuildRequires:	libgksuui-devel
 BuildRequires:	libgksu2-devel 
