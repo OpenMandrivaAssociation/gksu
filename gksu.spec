@@ -2,7 +2,7 @@
 %define version 2.0.0
 %define release %mkrel 3
 
-Summary: 	GKsu is a GTK+ frontend to the su and sudo programs
+Summary: 	GTK+ frontend to the su and sudo programs
 Name:	 	%name
 Version: 	%{version}
 Release: 	%{release}
