@@ -14,7 +14,7 @@ BuildRoot: 	%{_tmppath}/%name-root
 BuildRequires: 	gettext pkgconfig libgtk+2.0-devel bison autoconf2.5
 #BuildRequires:	libgksuui-devel
 BuildRequires:	libgksu2-devel 
-BuildRequires:	libGConf2-devel
+BuildRequires:	libGConf2-devel gnome-vfs-devel
 BuildRequires:	gtk-doc
 BuildRequires:  perl-XML-Parser
 BuildRequires:  gnome-keyring-devel
