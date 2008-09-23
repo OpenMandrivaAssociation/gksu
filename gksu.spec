@@ -6,15 +6,14 @@ Summary: 	GTK+ frontend to the su and sudo programs
 Name:	 	%name
 Version: 	%{version}
 Release: 	%{release}
-License: 	GPL
+License: 	GPLv2+
 Group: 	 	Graphical desktop/GNOME
-Url:		http://www.nongnu.org/gksu/
+URL:		http://www.nongnu.org/gksu/
 Source:  	http://people.debian.org/~kov/gksu/gksu/%name-%version.tar.bz2
 BuildRoot: 	%{_tmppath}/%name-root
 BuildRequires: 	gettext pkgconfig libgtk+2.0-devel bison autoconf2.5
-#BuildRequires:	libgksuui-devel
-BuildRequires:	libgksu2-devel 
-BuildRequires:	libGConf2-devel gnome-vfs-devel
+BuildRequires:	libgksu-devel 
+BuildRequires:	libGConf2-devel gnome-vfs2-devel
 BuildRequires:	gtk-doc
 BuildRequires:  perl-XML-Parser
 BuildRequires:  gnome-keyring-devel
@@ -32,6 +31,8 @@ program as another user.
 %setup -q
 
 %build
+export CPPFLAGS="$CPPFLAGS `pkg-config --cflags-only-I gnome-vfs-2.0`"
+export LDFLAGS="$LDFLAGS `pkg-config --libs gnome-vfs-2.0`"
 %configure2_5x
 %make
 
@@ -40,8 +41,6 @@ program as another user.
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
-  --add-category="Settings" \
-  --add-category="X-MandrivaLinux-System-Configuration-Other" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 %find_lang %name
