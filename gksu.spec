@@ -22,6 +22,7 @@ BuildRequires:  gnome-keyring-devel
 BuildRequires:  nautilus-devel
 BuildRequires:  libgcrypt-devel
 BuildRequires:  desktop-file-utils
+BuildRequires:	intltool
 
 %description
 gksu is a Gtk+ frontend to /bin/su. It supports login shells and preserving
