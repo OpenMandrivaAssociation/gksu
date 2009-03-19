@@ -1,6 +1,8 @@
+%define Werror_cflags %nil
+
 %define name 	gksu
-%define version 2.0.0
-%define release %mkrel 6
+%define version 2.0.2
+%define release %mkrel 1
 
 Summary: 	GTK+ frontend to the su and sudo programs
 Name:	 	%name
@@ -12,7 +14,7 @@ URL:		http://www.nongnu.org/gksu/
 Source:  	http://people.debian.org/~kov/gksu/gksu/%name-%version.tar.bz2
 BuildRoot: 	%{_tmppath}/%name-root
 BuildRequires: 	gettext pkgconfig libgtk+2.0-devel bison autoconf2.5
-BuildRequires:	libgksu-devel 
+BuildRequires:	libgksu-devel
 BuildRequires:	libGConf2-devel gnome-vfs2-devel
 BuildRequires:	gtk-doc
 BuildRequires:  perl-XML-Parser
@@ -60,7 +62,5 @@ fi
 %{_datadir}/applications/*
 %{_datadir}/pixmaps/*.png
 %{_datadir}/%name
-%{_libdir}/nautilus/extensions-1.0/*
+%{_libdir}/nautilus/extensions-2.0/*
 %{_mandir}/man1/*.1.*
-
-
