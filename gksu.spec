@@ -2,7 +2,7 @@
 
 %define name 	gksu
 %define version 2.0.2
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: 	GTK+ frontend to the su and sudo programs
 Name:	 	%name
