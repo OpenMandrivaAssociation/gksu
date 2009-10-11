@@ -15,14 +15,8 @@ Source:  	http://people.debian.org/~kov/gksu/gksu/%name-%version.tar.bz2
 Patch0:		gksu-2.0.2-use-xvt-for-terminal.patch
 Patch1:		gksu-2.0.2-fix-nautilus-link.patch
 BuildRoot: 	%{_tmppath}/%name-root
-BuildRequires: 	gettext pkgconfig libgtk+2.0-devel bison autoconf2.5
 BuildRequires:	libgksu-devel
-BuildRequires:	libGConf2-devel gnome-vfs2-devel
-BuildRequires:	gtk-doc
-BuildRequires:  perl-XML-Parser
-BuildRequires:  gnome-keyring-devel
 BuildRequires:  nautilus-devel
-BuildRequires:  libgcrypt-devel
 BuildRequires:	intltool
 
 %description
