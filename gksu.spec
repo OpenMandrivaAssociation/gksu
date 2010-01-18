@@ -1,22 +1,22 @@
 %define Werror_cflags %nil
 
-%define name 	gksu
+%define name	gksu
 %define version 2.0.2
 %define release %mkrel 3
 
-Summary: 	GTK+ frontend to the su and sudo programs
-Name:	 	%name
-Version: 	%{version}
-Release: 	%{release}
-License: 	GPLv2+
-Group: 	 	Graphical desktop/GNOME
+Summary:	GTK+ frontend to the su and sudo programs
+Name:		%name
+Version:	%{version}
+Release:	%{release}
+License:	GPLv2+
+Group:		Graphical desktop/GNOME
 URL:		http://www.nongnu.org/gksu/
-Source:  	http://people.debian.org/~kov/gksu/gksu/%name-%version.tar.bz2
+Source:		http://people.debian.org/~kov/gksu/gksu/%name-%version.tar.bz2
 Patch0:		gksu-2.0.2-use-xvt-for-terminal.patch
 Patch1:		gksu-2.0.2-fix-nautilus-link.patch
-BuildRoot: 	%{_tmppath}/%name-root
+BuildRoot:	%{_tmppath}/%name-root
 BuildRequires:	libgksu-devel
-BuildRequires:  nautilus-devel
+BuildRequires:	nautilus-devel
 BuildRequires:	intltool
 
 %description
@@ -35,7 +35,7 @@ program as another user.
 %make
 
 %install
-rm -f %buildoort
+rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
 %find_lang %name
