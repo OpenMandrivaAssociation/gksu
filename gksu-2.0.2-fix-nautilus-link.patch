@@ -1,0 +1,23 @@
+--- gksu-2.0.2/nautilus-gksu/Makefile.am~	2009-02-23 03:08:25.000000000 +0100
++++ gksu-2.0.2/nautilus-gksu/Makefile.am	2009-10-11 13:58:42.000000000 +0200
+@@ -5,5 +5,5 @@
+ nautilus_extensiondir=$(libdir)/nautilus/extensions-2.0
+ nautilus_extension_LTLIBRARIES = libnautilus-gksu.la
+ libnautilus_gksu_la_SOURCES = libnautilus-gksu.c
+-libnautilus_gksu_la_LDFLAGS = LDFLAGS = -module -avoid-version -no-undefined
+-libnautilus_gksu_la_LIBADD  = $(NAUTILUS_LIBS)
++libnautilus_gksu_la_LDFLAGS = -module -avoid-version -no-undefined
++libnautilus_gksu_la_LIBADD  = $(NAUTILUS_LIBS) -pthread
+--- gksu-2.0.2/nautilus-gksu/Makefile.in~	2009-03-04 20:22:25.000000000 +0100
++++ gksu-2.0.2/nautilus-gksu/Makefile.in	2009-10-11 13:59:01.000000000 +0200
+@@ -246,8 +246,8 @@
+ nautilus_extensiondir = $(libdir)/nautilus/extensions-2.0
+ nautilus_extension_LTLIBRARIES = libnautilus-gksu.la
+ libnautilus_gksu_la_SOURCES = libnautilus-gksu.c
+-libnautilus_gksu_la_LDFLAGS = LDFLAGS = -module -avoid-version -no-undefined
+-libnautilus_gksu_la_LIBADD = $(NAUTILUS_LIBS)
++libnautilus_gksu_la_LDFLAGS = -module -avoid-version -no-undefined
++libnautilus_gksu_la_LIBADD = $(NAUTILUS_LIBS) -pthread
+ all: all-am
+ 
+ .SUFFIXES:
