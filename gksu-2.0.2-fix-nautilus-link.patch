@@ -7,7 +7,7 @@
 -libnautilus_gksu_la_LDFLAGS = LDFLAGS = -module -avoid-version -no-undefined
 -libnautilus_gksu_la_LIBADD  = $(NAUTILUS_LIBS)
 +libnautilus_gksu_la_LDFLAGS = -module -avoid-version -no-undefined
-+libnautilus_gksu_la_LIBADD  = $(NAUTILUS_LIBS) -pthread
++libnautilus_gksu_la_LIBADD  = $(NAUTILUS_LIBS)
 --- gksu-2.0.2/nautilus-gksu/Makefile.in~	2009-03-04 20:22:25.000000000 +0100
 +++ gksu-2.0.2/nautilus-gksu/Makefile.in	2009-10-11 13:59:01.000000000 +0200
 @@ -246,8 +246,8 @@
@@ -17,7 +17,7 @@
 -libnautilus_gksu_la_LDFLAGS = LDFLAGS = -module -avoid-version -no-undefined
 -libnautilus_gksu_la_LIBADD = $(NAUTILUS_LIBS)
 +libnautilus_gksu_la_LDFLAGS = -module -avoid-version -no-undefined
-+libnautilus_gksu_la_LIBADD = $(NAUTILUS_LIBS) -pthread
++libnautilus_gksu_la_LIBADD = $(NAUTILUS_LIBS)
  all: all-am
  
  .SUFFIXES:

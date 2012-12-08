@@ -1,0 +1,11 @@
+--- ./nautilus-gksu/libnautilus-gksu.c.orig	2012-08-30 21:21:25.000000000 +0400
++++ ./nautilus-gksu/libnautilus-gksu.c	2012-08-30 21:21:32.000000000 +0400
+@@ -5,7 +5,7 @@
+ #include <string.h>
+ #include <pthread.h>
+ 
+-#include <glib/gkeyfile.h>
++#include <glib.h>
+ #include <gtk/gtk.h>
+ #include <gio/gio.h>
+ #include <libnautilus-extension/nautilus-extension-types.h>
