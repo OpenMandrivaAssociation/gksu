@@ -1,0 +1,14 @@
+--- gksu-2.0.2/configure.ac.bero	2013-01-15 21:58:41.754136377 +0100
++++ gksu-2.0.2/configure.ac	2013-01-15 21:58:55.935966502 +0100
+@@ -4,9 +4,9 @@
+ AC_PREREQ(2.57)
+ 
+ AC_INIT(gksu, 2.0.2, kov@debian.org)
+-AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
++AM_INIT_AUTOMAKE
+ AC_CONFIG_SRCDIR(gksu/gksu.c)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ AM_MAINTAINER_MODE
+ 
