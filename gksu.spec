@@ -3,7 +3,7 @@
 Summary:	GTK+ frontend to the su and sudo programs
 Name:		gksu
 Version:	2.0.2
-Release:	15
+Release:	16
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.nongnu.org/gksu/
