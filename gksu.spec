@@ -3,7 +3,7 @@
 Summary:	GTK+ frontend to the su and sudo programs
 Name:		gksu
 Version:	2.0.2
-Release:	19
+Release:	20
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.nongnu.org/gksu/
@@ -23,26 +23,6 @@ environment when acting as a su frontend. It is useful to menu items or
 other graphical programs that need to ask a user's password to run another
 program as another user.
 
-%prep
-%setup -q
-%apply_patches
-
-%build
-autoreconf -fi
-%configure2_5x \
-	--disable-static
-%make
-
-%install
-%makeinstall_std 
-
-%find_lang %{name}
-
-%post
-if [ -e /etc/gksu.conf ]; then
-	sh /usr/share/gksu/gksu-migrate-conf.sh
-fi
-
 %files -f %{name}.lang
 %doc AUTHORS ChangeLog COPYING README
 %{_bindir}/*
@@ -52,3 +32,24 @@ fi
 %{_libdir}/nautilus/extensions-2.0/*.so
 %{_mandir}/man1/*.1*
 
+#---------------------------------------------------------------------------
+
+%prep
+%setup -q
+%autopatch -p1
+
+%build
+autoreconf -fi
+%configure
+%make_build
+
+%install
+%make_install
+
+# locales
+%find_lang %{name}
+
+%post
+if [ -e /etc/gksu.conf ]; then
+	sh /usr/share/gksu/gksu-migrate-conf.sh
+fi
