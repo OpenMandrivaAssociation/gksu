@@ -14,6 +14,7 @@ Patch2:		glib_fix.patch
 Patch3:		gksu-2.0.2-automake-1.13.patch
 
 BuildRequires:  intltool
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libgksu2)
 BuildRequires:	pkgconfig(libnautilus-extension)
 
