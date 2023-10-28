@@ -16,7 +16,7 @@ Patch3:		gksu-2.0.2-automake-1.13.patch
 BuildRequires:  intltool
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libgksu2)
-BuildRequires:	pkgconfig(libnautilus-extension)
+BuildRequires:	pkgconfig(libnautilus-extension-4)
 
 %description
 gksu is a Gtk+ frontend to /bin/su. It supports login shells and preserving
@@ -36,8 +36,7 @@ program as another user.
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 autoreconf -fi
