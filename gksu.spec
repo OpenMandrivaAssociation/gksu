@@ -6,7 +6,7 @@ Version:	2.0.2
 Release:	21
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
-Url:		http://www.nongnu.org/gksu/
+Url:		https://www.nongnu.org/gksu/
 Source0:	http://people.debian.org/~kov/gksu/gksu/%{name}-%{version}.tar.bz2
 Patch0:		gksu-2.0.2-use-xvt-for-terminal.patch
 Patch1:		gksu-2.0.2-fix-nautilus-link.patch
